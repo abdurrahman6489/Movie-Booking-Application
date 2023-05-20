@@ -8,7 +8,7 @@ const API_KEY = "api_key=7c5c9621868ea67c0f1ac5f1719ab556";
 const BASE_URL = "https://api.themoviedb.org/3/";
 const query = "movie/now_playing?";
 const languageQuery = "&language=en-US";
-const pageQuery = "&page=1";
+const pageQuery = "&page=2";
 const API_URL = BASE_URL + query + API_KEY + languageQuery + pageQuery;
 const IMAGE_URL = "https://image.tmdb.org/t/p/w500";
 const genreQuery = BASE_URL + "genre/movie/list?" + API_KEY + "&language=en-US";
@@ -156,7 +156,8 @@ function openModal(modal, data) {
     genres,
     overview,
   } = data;
-  let price = Math.floor(Math.random() * 50) + 250;
+  // let price = Math.floor(Math.random() * 50) + 250;
+  let price = vote_average * 40;
   modal.innerHTML = `
       <div class="modal-header">
         <button id="closeBtn" class="closeButton">&times;</button>
